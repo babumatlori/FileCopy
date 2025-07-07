@@ -1,0 +1,25 @@
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter source path: ");
+        String srcPath = scanner.nextLine();
+
+        System.out.print("Enter destination path: ");
+        String destPath = scanner.nextLine();
+
+        File src = new File(srcPath);
+        File dest = new File(destPath);
+
+        if (!src.exists()) {
+            System.out.println("Source file/directory not found!");
+            return;
+        }
+
+        try {
+            copy(src, dest);
+            System.out.println("Copy operation completed successfully.");
+        } catch (IOException e) {
+            System.out.println("Error during copy: " + e.getMessage());
+        }
+    }
+}
