@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class DirectoryCopy {
+public class DirCopy {
 
     public static void copy(File src, File dest) throws IOException {
         if (src.isFile()) {
